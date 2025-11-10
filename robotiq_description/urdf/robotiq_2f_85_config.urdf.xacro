@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<!-- Standalone URDF xacro that instantiates crab_claw_v1 -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="crab_claw_v1">
+
+    <xacro:include filename="$(find bam_descriptions)/urdf/common.xacro" />
+    <xacro:arg name="config_file_path" default="$(find bam_descriptions)/urdf/crab_claw_v1/config/crab_claw_skuBam_v0.0.0_config.yaml"/>
+    <xacro:property name="config_file_path" value="$(arg config_file_path)"/>
+    <xacro:property name="cfg" value="${xacro.load_yaml(config_file_path)}"/>
+
+    <xacro:property name="plugin" value="${cfg['plugin']}" />
+    <xacro:property name="reflect" value="${cfg['reflect']}" />    
+    <xacro:property name="prefix" value="${cfg['prefix']}" />
+
+    <xacro:property name="world_xyz" value="${cfg['world_xyz']}" />
+    <xacro:property name="world_rpy" value="${cfg['world_rpy']}" />
+    <xacro:property name="base_xyz" value="${cfg['base_xyz']}" />
+    <xacro:property name="base_rpy" value="${cfg['base_rpy']}" />
+
+    <xacro:if value="${plugin != 'none'}">
+        <xacro:include filename="$(find bam_descriptions)/urdf/hybrid_v1/crab_claw_v1.ros2_control.xacro"/>
+        <xacro:gripper_v1_ros2_control prefix="${prefix}" plugin="${plugin}"/>
+    </xacro:if>
+
+    <link name="world"/>
+
+    <joint name="world_to_base" type="fixed">
+        <origin xyz="${world_xyz}" rpy="${world_rpy}"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+   <link name="base_link"/>
+    
+    <joint name="base_link_joint" type="fixed">
+        <origin xyz="${base_xyz}" rpy="${base_rpy}"/>
+        <parent link="base_link"/>
+        <child link="${prefix}robotiq_85_base_link"/>
+    </joint>
+
+    <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_85_macro.urdf.xacro" />
+    <xacro:make_hand config_file_path="${config_file_path}"/>
+
+</robot>

@@ -8,7 +8,15 @@
     <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_140_macro.urdf.xacro" />
 
     <link name="world" />
-    <xacro:robotiq_gripper name="RobotiqGripperHardwareInterface" prefix="" parent="world" use_fake_hardware="$(arg use_fake_hardware)" com_port="$(arg com_port)">
-        <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:robotiq_gripper>
+    <xacro:robotiq_gripper
+        name="RobotiqGripperHardwareInterface"
+        prefix=""
+        use_fake_hardware="$(arg use_fake_hardware)"
+        com_port="$(arg com_port)" />
+
+    <joint name="world_to_robotiq_140_base" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
+        <parent link="world" />
+        <child link="robotiq_base_link" />
+    </joint>
 </robot>

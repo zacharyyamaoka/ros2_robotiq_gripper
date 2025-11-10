@@ -3,8 +3,6 @@
   <xacro:macro name="robotiq_gripper" params="
         name
         prefix
-        parent
-        *origin
         sim_gazebo:=false
         sim_isaac:=false
         isaac_joint_commands:=/isaac_joint_commands
@@ -39,14 +37,6 @@
                 gripper_closed_position="${gripper_closed_position}"/>
         </xacro:if>
 
-        <!-- this is a temporary link to rotate the 2f-140 gripper to match the 2f-85 -->
-        <link name="${prefix}robotiq_base_link"/>
-        <joint name="${prefix}robotiq_base_joint" type="fixed">
-          <parent link="${parent}" />
-          <child link="${prefix}robotiq_base_link" />
-          <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
-        </joint>
-
         <link name="${prefix}robotiq_140_base_link">
         <inertial>
           <origin xyz="8.625E-08 -4.6583E-06 0.03145" rpy="0 0 0" />
@@ -69,17 +59,34 @@
           </geometry>
         </collision>
       </link>
-      <joint name="${prefix}robotiq_140_base_joint" type="fixed">
-          <parent link="${prefix}robotiq_base_link" />
-          <child link="${prefix}robotiq_140_base_link" />
-          <xacro:insert_block name="origin" />
-      </joint>
 
       <!-- Include the finger xacros and run them -->
-      <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_140.xacro" />
-      <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="140"/>
-      <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="140"/>
-      <xacro:finger_joint prefix="${prefix}"/>
-      <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
-    </xacro:macro>
+    <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_140.xacro" />
+    <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="140"/>
+    <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="140"/>
+    <xacro:finger_joint prefix="${prefix}"/>
+    <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
+  </xacro:macro>
+
+  <xacro:macro name="make_hand" params="config_file_path">
+    <xacro:property name="cfg" value="${xacro.load_yaml(config_file_path)}"/>
+    <xacro:robotiq_gripper
+        name="${cfg['info']['name'] if cfg['info']['name'] else 'Robotiq2F140'}"
+        prefix="${cfg['prefix']}"
+        sim_gazebo="${cfg['args']['sim_gazebo']}"
+        sim_isaac="${cfg['args']['sim_isaac']}"
+        isaac_joint_commands="${cfg['args']['isaac_joint_commands']}"
+        isaac_joint_states="${cfg['args']['isaac_joint_states']}"
+        use_fake_hardware="${cfg['args']['use_fake_hardware']}"
+        mock_sensor_commands="${cfg['args']['mock_sensor_commands']}"
+        include_ros2_control="${cfg['args']['include_ros2_control']}"
+        com_port="${cfg['args']['com_port']}"
+        gripper_speed_multiplier="${cfg['args']['gripper_speed_multiplier']}"
+        gripper_force_multiplier="${cfg['args']['gripper_force_multiplier']}"
+        gripper_max_speed="${cfg['args']['gripper_max_speed']}"
+        gripper_max_force="${cfg['args']['gripper_max_force']}"
+        gripper_closed_position="${cfg['args']['gripper_closed_position']}">
+    </xacro:robotiq_gripper>
+  </xacro:macro>
+
 </robot>
