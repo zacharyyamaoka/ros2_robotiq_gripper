@@ -1,5 +1,6 @@
-REGISTRY: {}
 args:
+    base_rpy: 0 0 0
+    base_xyz: 0 0 0
     com_port: /dev/ttyUSB0
     gripper_closed_position: '0.7929'
     gripper_force_multiplier: '0.5'
@@ -10,36 +11,313 @@ args:
     include_ros2_control: 'true'
     isaac_joint_commands: /isaac_joint_commands
     isaac_joint_states: /isaac_joint_states
+    max_width: '0.085'
     mock_sensor_commands: 'false'
     parent_link: ''
+    plugin: none
+    reflect: '1'
     sim_gazebo: 'false'
     sim_isaac: 'false'
     use_fake_hardware: 'false'
-arm_mount: robotiq_85_base_link
-base_link: base_link
-base_mount: ''
-base_rpy: 0.0 0.0 0.0
-base_xyz: 0.0 0.0 0.0
-config_dir: /home/bam/public_ws/src/ros2_robotiq_gripper/robotiq_description/urdf/config
-config_file_name: robotiq_2f_85_2f_85_v0.0.0
-config_file_path: /home/bam/public_ws/src/ros2_robotiq_gripper/robotiq_description/urdf/config/robotiq_2f_85_2f_85_v0.0.0.yaml
-force_srdf_gen: 'false'
-hash_config_file: 'false'
+    world_rpy: 0 0 0
+    world_xyz: 0 0 0
+    z_into_table: 'false'
+children: []
+config_file: /home/bam/bam_ws/src/robotiq_description/urdf/config/robotiq_2f_85_2f_85_v0.0.0.yaml
 info:
     config_key: ''
     name: robotiq_2f_85
+    prefix: ''
     sku: 2f_85
     type: Robotiq
     urdf_hash: ''
     uuid: ''
     version: 0.0.0
+joint_positions:
+    default_positions: initial
+    joint_names: finger_joint
+    positions:
+        initial: '0.0'
 joints:
-    robotiq_85_left_finger_tip_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
+    added_entities: []
+    entities:
+        finger_joint:
+            axis:
+                x: '0.0'
+                y: '0.0'
+                z: '0.0'
+            calibration:
+                falling_hardstop_position: '0.0'
+                falling_home_position: '0.0'
+                rising_hardstop_position: '0.0'
+                rising_home_position: '0.0'
+            initial_position: '0.0'
+            io:
+                can_id: '0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            mimic:
+                enabled: 'false'
+                joint: ''
+                multiplier: '1.0'
+                offset: '0.0'
+            name: finger_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            tags: []
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: finger_joint
+        robotiq_85_left_finger_tip_joint:
+            axis:
+                x: '0.0'
+                y: '0.0'
+                z: '0.0'
+            calibration:
+                falling_hardstop_position: '0.0'
+                falling_home_position: '0.0'
+                rising_hardstop_position: '0.0'
+                rising_home_position: '0.0'
+            initial_position: '0.0'
+            io:
+                can_id: '0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            mimic:
+                enabled: 'true'
+                joint: ''
+                multiplier: '1.0'
+                offset: '0.0'
+            name: robotiq_85_left_finger_tip_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            tags: []
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_left_finger_tip_joint
+        robotiq_85_left_inner_knuckle_joint:
+            axis:
+                x: '0.0'
+                y: '0.0'
+                z: '0.0'
+            calibration:
+                falling_hardstop_position: '0.0'
+                falling_home_position: '0.0'
+                rising_hardstop_position: '0.0'
+                rising_home_position: '0.0'
+            initial_position: '0.0'
+            io:
+                can_id: '0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            mimic:
+                enabled: 'true'
+                joint: ''
+                multiplier: '1.0'
+                offset: '0.0'
+            name: robotiq_85_left_inner_knuckle_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            tags: []
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_left_inner_knuckle_joint
+        robotiq_85_right_finger_tip_joint:
+            axis:
+                x: '0.0'
+                y: '0.0'
+                z: '0.0'
+            calibration:
+                falling_hardstop_position: '0.0'
+                falling_home_position: '0.0'
+                rising_hardstop_position: '0.0'
+                rising_home_position: '0.0'
+            initial_position: '0.0'
+            io:
+                can_id: '0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            mimic:
+                enabled: 'true'
+                joint: ''
+                multiplier: '1.0'
+                offset: '0.0'
+            name: robotiq_85_right_finger_tip_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            tags: []
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_right_finger_tip_joint
+        robotiq_85_right_inner_knuckle_joint:
+            axis:
+                x: '0.0'
+                y: '0.0'
+                z: '0.0'
+            calibration:
+                falling_hardstop_position: '0.0'
+                falling_home_position: '0.0'
+                rising_hardstop_position: '0.0'
+                rising_home_position: '0.0'
+            initial_position: '0.0'
+            io:
+                can_id: '0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            mimic:
+                enabled: 'true'
+                joint: ''
+                multiplier: '1.0'
+                offset: '0.0'
+            name: robotiq_85_right_inner_knuckle_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            tags: []
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_right_inner_knuckle_joint
+        robotiq_85_right_knuckle_joint:
+            axis:
+                x: '0.0'
+                y: '0.0'
+                z: '0.0'
+            calibration:
+                falling_hardstop_position: '0.0'
+                falling_home_position: '0.0'
+                rising_hardstop_position: '0.0'
+                rising_home_position: '0.0'
+            initial_position: '0.0'
+            io:
+                can_id: '0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            mimic:
+                enabled: 'true'
+                joint: ''
+                multiplier: '1.0'
+                offset: '0.0'
+            name: robotiq_85_right_knuckle_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            tags: []
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_right_knuckle_joint
+    finger_joint:
+        axis:
+            x: '0.0'
+            y: '0.0'
+            z: '0.0'
+        calibration:
+            falling_hardstop_position: '0.0'
+            falling_home_position: '0.0'
+            rising_hardstop_position: '0.0'
+            rising_home_position: '0.0'
         initial_position: '0.0'
-        is_fixed: 'false'
+        io:
+            can_id: '0'
         limits:
             has_acceleration_limits: 'true'
             has_effort_limits: 'false'
@@ -56,25 +334,78 @@ joints:
             min_jerk: '-100.0'
             min_position: '-3.141593'
             min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
+        mimic:
+            enabled: 'false'
+            joint: ''
+            multiplier: '1.0'
+            offset: '0.0'
+        name: finger_joint
+        physics:
+            damping: '0.0'
+            friction: '0.0'
+        tags: []
+        transform:
+            rpy: 0.0 -0.0 0.0
+            xyz: 0.0 0.0 0.0
+        type: revolute
+        unprefixed_name: finger_joint
+    robotiq_85_left_finger_tip_joint:
+        axis:
+            x: '0.0'
+            y: '0.0'
+            z: '0.0'
+        calibration:
+            falling_hardstop_position: '0.0'
+            falling_home_position: '0.0'
+            rising_hardstop_position: '0.0'
+            rising_home_position: '0.0'
+        initial_position: '0.0'
+        io:
+            can_id: '0'
+        limits:
+            has_acceleration_limits: 'true'
+            has_effort_limits: 'false'
+            has_jerk_limits: 'true'
+            has_position_limits: 'true'
+            has_velocity_limits: 'true'
+            max_acceleration: '10.0'
+            max_effort: '0.0'
+            max_jerk: '100.0'
+            max_position: '3.141593'
+            max_velocity: '10.0'
+            min_acceleration: '-10.0'
+            min_effort: '-0.0'
+            min_jerk: '-100.0'
+            min_position: '-3.141593'
+            min_velocity: '-10.0'
+        mimic:
+            enabled: 'true'
+            joint: ''
+            multiplier: '1.0'
+            offset: '0.0'
         name: robotiq_85_left_finger_tip_joint
         physics:
             damping: '0.0'
             friction: '0.0'
+        tags: []
         transform:
-            child_frame_id: ''
-            frame_id: ''
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
+        type: revolute
         unprefixed_name: robotiq_85_left_finger_tip_joint
     robotiq_85_left_inner_knuckle_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
+        axis:
+            x: '0.0'
+            y: '0.0'
+            z: '0.0'
+        calibration:
+            falling_hardstop_position: '0.0'
+            falling_home_position: '0.0'
+            rising_hardstop_position: '0.0'
+            rising_home_position: '0.0'
         initial_position: '0.0'
-        is_fixed: 'false'
+        io:
+            can_id: '0'
         limits:
             has_acceleration_limits: 'true'
             has_effort_limits: 'false'
@@ -91,60 +422,34 @@ joints:
             min_jerk: '-100.0'
             min_position: '-3.141593'
             min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
+        mimic:
+            enabled: 'true'
+            joint: ''
+            multiplier: '1.0'
+            offset: '0.0'
         name: robotiq_85_left_inner_knuckle_joint
         physics:
             damping: '0.0'
             friction: '0.0'
+        tags: []
         transform:
-            child_frame_id: ''
-            frame_id: ''
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
+        type: revolute
         unprefixed_name: robotiq_85_left_inner_knuckle_joint
-    robotiq_85_left_knuckle_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
-        initial_position: '0.0'
-        is_fixed: 'false'
-        limits:
-            has_acceleration_limits: 'true'
-            has_effort_limits: 'false'
-            has_jerk_limits: 'true'
-            has_position_limits: 'true'
-            has_velocity_limits: 'true'
-            max_acceleration: '10.0'
-            max_effort: '0.0'
-            max_jerk: '100.0'
-            max_position: '3.141593'
-            max_velocity: '10.0'
-            min_acceleration: '-10.0'
-            min_effort: '-0.0'
-            min_jerk: '-100.0'
-            min_position: '-3.141593'
-            min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'false'
-        name: robotiq_85_left_knuckle_joint
-        physics:
-            damping: '0.0'
-            friction: '0.0'
-        transform:
-            child_frame_id: ''
-            frame_id: ''
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-        unprefixed_name: robotiq_85_left_knuckle_joint
     robotiq_85_right_finger_tip_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
+        axis:
+            x: '0.0'
+            y: '0.0'
+            z: '0.0'
+        calibration:
+            falling_hardstop_position: '0.0'
+            falling_home_position: '0.0'
+            rising_hardstop_position: '0.0'
+            rising_home_position: '0.0'
         initial_position: '0.0'
-        is_fixed: 'false'
+        io:
+            can_id: '0'
         limits:
             has_acceleration_limits: 'true'
             has_effort_limits: 'false'
@@ -161,25 +466,34 @@ joints:
             min_jerk: '-100.0'
             min_position: '-3.141593'
             min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
+        mimic:
+            enabled: 'true'
+            joint: ''
+            multiplier: '1.0'
+            offset: '0.0'
         name: robotiq_85_right_finger_tip_joint
         physics:
             damping: '0.0'
             friction: '0.0'
+        tags: []
         transform:
-            child_frame_id: ''
-            frame_id: ''
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
+        type: revolute
         unprefixed_name: robotiq_85_right_finger_tip_joint
     robotiq_85_right_inner_knuckle_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
+        axis:
+            x: '0.0'
+            y: '0.0'
+            z: '0.0'
+        calibration:
+            falling_hardstop_position: '0.0'
+            falling_home_position: '0.0'
+            rising_hardstop_position: '0.0'
+            rising_home_position: '0.0'
         initial_position: '0.0'
-        is_fixed: 'false'
+        io:
+            can_id: '0'
         limits:
             has_acceleration_limits: 'true'
             has_effort_limits: 'false'
@@ -196,25 +510,34 @@ joints:
             min_jerk: '-100.0'
             min_position: '-3.141593'
             min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
+        mimic:
+            enabled: 'true'
+            joint: ''
+            multiplier: '1.0'
+            offset: '0.0'
         name: robotiq_85_right_inner_knuckle_joint
         physics:
             damping: '0.0'
             friction: '0.0'
+        tags: []
         transform:
-            child_frame_id: ''
-            frame_id: ''
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
+        type: revolute
         unprefixed_name: robotiq_85_right_inner_knuckle_joint
     robotiq_85_right_knuckle_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
+        axis:
+            x: '0.0'
+            y: '0.0'
+            z: '0.0'
+        calibration:
+            falling_hardstop_position: '0.0'
+            falling_home_position: '0.0'
+            rising_hardstop_position: '0.0'
+            rising_home_position: '0.0'
         initial_position: '0.0'
-        is_fixed: 'false'
+        io:
+            can_id: '0'
         limits:
             has_acceleration_limits: 'true'
             has_effort_limits: 'false'
@@ -231,27 +554,528 @@ joints:
             min_jerk: '-100.0'
             min_position: '-3.141593'
             min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
+        mimic:
+            enabled: 'true'
+            joint: ''
+            multiplier: '1.0'
+            offset: '0.0'
         name: robotiq_85_right_knuckle_joint
         physics:
             damping: '0.0'
             friction: '0.0'
+        tags: []
         transform:
-            child_frame_id: ''
-            frame_id: ''
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
+        type: revolute
         unprefixed_name: robotiq_85_right_knuckle_joint
 links:
+    added_entities: []
+    entities:
+        robotiq_85_base_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'true'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_base_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_base_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_left_finger_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_left_finger_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_left_finger_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_left_finger_tip_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_left_finger_tip_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_left_finger_tip_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_left_inner_knuckle_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_left_inner_knuckle_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_left_inner_knuckle_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_left_knuckle_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_left_knuckle_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_left_knuckle_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_right_finger_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_right_finger_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_right_finger_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_right_finger_tip_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_right_finger_tip_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_right_finger_tip_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_right_inner_knuckle_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_right_inner_knuckle_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_right_inner_knuckle_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_right_knuckle_link:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'false'
+            name: robotiq_85_right_knuckle_link
+            scene_obj_collision: 'true'
+            tags: []
+            unprefixed_name: robotiq_85_right_knuckle_link
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_tcp_tool:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'false'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'true'
+            name: robotiq_85_tcp_tool
+            scene_obj_collision: 'false'
+            tags: []
+            unprefixed_name: robotiq_85_tcp_tool
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+        robotiq_85_tcp_world:
+            collision:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
+            disable: 'false'
+            display: 'true'
+            inertial:
+                inertia:
+                    ixx: '0.0'
+                    ixy: '0.0'
+                    ixz: '0.0'
+                    iyy: '0.0'
+                    iyz: '0.0'
+                    izz: '0.0'
+                mass: '0.0'
+                origin:
+                    x: '0.0'
+                    y: '0.0'
+                    z: '0.0'
+            is_frame: 'true'
+            name: robotiq_85_tcp_world
+            scene_obj_collision: 'false'
+            tags: []
+            unprefixed_name: robotiq_85_tcp_world
+            visual:
+                geometry:
+                    filename: ''
+                    scale: 1.0 1.0 1.0
+                material:
+                    color:
+                        a: '1.0'
+                        b: '0.5'
+                        g: '0.5'
+                        r: '0.5'
+                    metallic: '0.0'
+                    roughness: '1.0'
+                name: ''
+                origin:
+                    rpy: 0.0 -0.0 0.0
+                    xyz: 0.0 0.0 0.0
     robotiq_85_base_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'true'
         inertial:
@@ -270,18 +1094,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_base_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_base_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_left_finger_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -300,18 +1139,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_left_finger_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_left_finger_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_left_finger_tip_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -330,18 +1184,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_left_finger_tip_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_left_finger_tip_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_left_inner_knuckle_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -360,18 +1229,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_left_inner_knuckle_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_left_inner_knuckle_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_left_knuckle_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -390,18 +1274,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_left_knuckle_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_left_knuckle_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_right_finger_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -420,18 +1319,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_right_finger_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_right_finger_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_right_finger_tip_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -450,18 +1364,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_right_finger_tip_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_right_finger_tip_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_right_inner_knuckle_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -480,18 +1409,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_right_inner_knuckle_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_right_inner_knuckle_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_right_knuckle_link:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -510,18 +1454,33 @@ links:
         is_frame: 'false'
         name: robotiq_85_right_knuckle_link
         scene_obj_collision: 'true'
+        tags: []
         unprefixed_name: robotiq_85_right_knuckle_link
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_tcp_tool:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'false'
         inertial:
@@ -540,18 +1499,33 @@ links:
         is_frame: 'true'
         name: robotiq_85_tcp_tool
         scene_obj_collision: 'false'
+        tags: []
         unprefixed_name: robotiq_85_tcp_tool
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
     robotiq_85_tcp_world:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
+        collision:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
         disable: 'false'
         display: 'true'
         inertial:
@@ -570,38 +1544,35 @@ links:
         is_frame: 'true'
         name: robotiq_85_tcp_world
         scene_obj_collision: 'false'
+        tags: []
         unprefixed_name: robotiq_85_tcp_world
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-lock_joints: 'false'
-max_width: '0.085'
-plugin: none
+        visual:
+            geometry:
+                filename: ''
+                scale: 1.0 1.0 1.0
+            material:
+                color:
+                    a: '1.0'
+                    b: '0.5'
+                    g: '0.5'
+                    r: '0.5'
+                metallic: '0.0'
+                roughness: '1.0'
+            name: ''
+            origin:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
 points_of_interest: []
-positions:
-    default_positions: initial
-    joint_names: robotiq_85_left_knuckle_joint robotiq_85_right_knuckle_joint robotiq_85_left_inner_knuckle_joint
-        robotiq_85_right_inner_knuckle_joint robotiq_85_left_finger_tip_joint robotiq_85_right_finger_tip_joint
-    positions:
-        initial: 0.0 0.0 0.0 0.0 0.0 0.0
-prefix: ''
-reflect: '1'
-root_link: world
 srdf:
-    loaded_from_cache: 'false'
+    force_regenerate: 'false'
+    loaded_from_cache: 'true'
     macro_path: ''
     newly_generated: 'false'
-    path: ''
+    path: /home/bam/bam_ws/src/robotiq_description/urdf/config/srdf_cache/robotiq_2f_85_2f_85_v0.0.0.srdf
     xacro_path: ''
-tcp_tool: tcp_tool
-tcp_world: tcp_world
-tcp_world_floating: tcp_world_floating
 urdf:
-    macro_path: /home/bam/public_ws/src/ros2_robotiq_gripper/robotiq_description/urdf/robotiq_2f_85_macro.urdf.xacro
-    mesh_package_name: /home/bam/public_ws/src/ros2_robotiq_gripper/robotiq_description
+    abs_package_dirs:
+        robotiq_description: /home/bam/bam_ws/src
+    macro_path: /home/bam/bam_ws/src/robotiq_description/urdf/robotiq_2f_85_macro.urdf.xacro
     path: ''
-    xacro_path: /home/bam/public_ws/src/ros2_robotiq_gripper/robotiq_description/urdf/robotiq_2f_85_config.urdf.xacro
-world_rpy: 0.0 0.0 0.0
-world_xyz: 0.0 0.0 0.0
-z_into_table: 'false'
+    xacro_path: /home/bam/bam_ws/src/robotiq_description/urdf/robotiq_2f_85_config.urdf.xacro

@@ -1,42 +1,108 @@
 REGISTRY: {}
 args:
     com_port: /dev/ttyUSB0
-    gripper_closed_position: '0.695'
+    gripper_closed_position: '0.7929'
     gripper_force_multiplier: '0.5'
-    gripper_max_force: '125.0'
-    gripper_max_speed: '0.25'
-    gripper_max_width: '0.14'
+    gripper_max_force: '235.0'
+    gripper_max_speed: '0.15'
+    gripper_max_width: '0.085'
     gripper_speed_multiplier: '1.0'
     include_ros2_control: 'true'
     isaac_joint_commands: /isaac_joint_commands
     isaac_joint_states: /isaac_joint_states
     mock_sensor_commands: 'false'
-    parent_link: robotiq_140_base_link
+    parent_link: back_right_robotiq_85_base_link
     sim_gazebo: 'false'
     sim_isaac: 'false'
     use_fake_hardware: 'false'
-arm_mount: robotiq_140_base_link
+arm_mount: back_right_robotiq_85_base_link
 bam_descriptions: /home/bam/bam_ws/src/bam_machine/bam/descriptions
 base_link: base_link
-base_mount: robotiq_140_base_link
-base_rpy: 0 0 0
-base_xyz: 0 0 0
+base_mount: back_right_robotiq_85_base_link
+base_rpy: 0.0 0.0 0.0
+base_xyz: 0.0 0.0 0.0
 config_dir: /home/bam/bam_ws/src/robotiq_description/urdf/config
-config_file_name: robotiq_2f_140_2f_140_v0.0.0
-config_file: /home/bam/bam_ws/src/robotiq_description/urdf/config/robotiq_2f_140_2f_140_v0.0.0.yaml
+config_file_name: back_right_robotiq_2f_85_2f_85_v0.0.0
+config_file: /home/bam/bam_ws/src/robotiq_description/urdf/config/back_right_robotiq_2f_85_2f_85_v0.0.0.yaml
 force_srdf_gen: 'false'
 hash_config_file: 'false'
 info:
     config_key: ''
-    name: robotiq_2f_140
-    sku: 2f_140
+    name: robotiq_2f_85
+    sku: 2f_85
     type: Robotiq
     urdf_hash: ''
     uuid: ''
     version: 0.0.0
 joints:
     entities:
-        robotiq_140_finger_joint:
+        back_right_back_right_robotiq_85_left_finger_tip_joint:
+            can_id: '0'
+            hardstop_position: '0.0'
+            home_position: '0.0'
+            initial_position: '0.0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            lock: 'false'
+            lock_position: '0.0'
+            mimic: 'true'
+            name: back_right_robotiq_85_left_finger_tip_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_left_finger_tip_joint
+        back_right_back_right_robotiq_85_left_inner_knuckle_joint:
+            can_id: '0'
+            hardstop_position: '0.0'
+            home_position: '0.0'
+            initial_position: '0.0'
+            limits:
+                has_acceleration_limits: 'true'
+                has_effort_limits: 'false'
+                has_jerk_limits: 'true'
+                has_position_limits: 'true'
+                has_velocity_limits: 'true'
+                max_acceleration: '10.0'
+                max_effort: '0.0'
+                max_jerk: '100.0'
+                max_position: '3.141593'
+                max_velocity: '10.0'
+                min_acceleration: '-10.0'
+                min_effort: '-0.0'
+                min_jerk: '-100.0'
+                min_position: '-3.141593'
+                min_velocity: '-10.0'
+            lock: 'false'
+            lock_position: '0.0'
+            mimic: 'true'
+            name: back_right_robotiq_85_left_inner_knuckle_joint
+            physics:
+                damping: '0.0'
+                friction: '0.0'
+            transform:
+                rpy: 0.0 -0.0 0.0
+                xyz: 0.0 0.0 0.0
+            type: revolute
+            unprefixed_name: robotiq_85_left_inner_knuckle_joint
+        back_right_back_right_robotiq_85_left_knuckle_joint:
             can_id: '0'
             hardstop_position: '0.0'
             home_position: '0.0'
@@ -60,7 +126,7 @@ joints:
             lock: 'false'
             lock_position: '0.0'
             mimic: 'false'
-            name: robotiq_140_finger_joint
+            name: back_right_robotiq_85_left_knuckle_joint
             physics:
                 damping: '0.0'
                 friction: '0.0'
@@ -68,8 +134,8 @@ joints:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
             type: revolute
-            unprefixed_name: robotiq_140_finger_joint
-        robotiq_140_left_inner_finger_joint:
+            unprefixed_name: robotiq_85_left_knuckle_joint
+        back_right_back_right_robotiq_85_right_finger_tip_joint:
             can_id: '0'
             hardstop_position: '0.0'
             home_position: '0.0'
@@ -93,7 +159,7 @@ joints:
             lock: 'false'
             lock_position: '0.0'
             mimic: 'true'
-            name: robotiq_140_left_inner_finger_joint
+            name: back_right_robotiq_85_right_finger_tip_joint
             physics:
                 damping: '0.0'
                 friction: '0.0'
@@ -101,8 +167,8 @@ joints:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
             type: revolute
-            unprefixed_name: robotiq_140_left_inner_finger_joint
-        robotiq_140_left_inner_knuckle_joint:
+            unprefixed_name: robotiq_85_right_finger_tip_joint
+        back_right_back_right_robotiq_85_right_inner_knuckle_joint:
             can_id: '0'
             hardstop_position: '0.0'
             home_position: '0.0'
@@ -126,7 +192,7 @@ joints:
             lock: 'false'
             lock_position: '0.0'
             mimic: 'true'
-            name: robotiq_140_left_inner_knuckle_joint
+            name: back_right_robotiq_85_right_inner_knuckle_joint
             physics:
                 damping: '0.0'
                 friction: '0.0'
@@ -134,8 +200,8 @@ joints:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
             type: revolute
-            unprefixed_name: robotiq_140_left_inner_knuckle_joint
-        robotiq_140_right_inner_finger_joint:
+            unprefixed_name: robotiq_85_right_inner_knuckle_joint
+        back_right_back_right_robotiq_85_right_knuckle_joint:
             can_id: '0'
             hardstop_position: '0.0'
             home_position: '0.0'
@@ -159,7 +225,7 @@ joints:
             lock: 'false'
             lock_position: '0.0'
             mimic: 'true'
-            name: robotiq_140_right_inner_finger_joint
+            name: back_right_robotiq_85_right_knuckle_joint
             physics:
                 damping: '0.0'
                 friction: '0.0'
@@ -167,74 +233,74 @@ joints:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
             type: revolute
-            unprefixed_name: robotiq_140_right_inner_finger_joint
-        robotiq_140_right_inner_knuckle_joint:
-            can_id: '0'
-            hardstop_position: '0.0'
-            home_position: '0.0'
-            initial_position: '0.0'
-            limits:
-                has_acceleration_limits: 'true'
-                has_effort_limits: 'false'
-                has_jerk_limits: 'true'
-                has_position_limits: 'true'
-                has_velocity_limits: 'true'
-                max_acceleration: '10.0'
-                max_effort: '0.0'
-                max_jerk: '100.0'
-                max_position: '3.141593'
-                max_velocity: '10.0'
-                min_acceleration: '-10.0'
-                min_effort: '-0.0'
-                min_jerk: '-100.0'
-                min_position: '-3.141593'
-                min_velocity: '-10.0'
-            lock: 'false'
-            lock_position: '0.0'
-            mimic: 'true'
-            name: robotiq_140_right_inner_knuckle_joint
-            physics:
-                damping: '0.0'
-                friction: '0.0'
-            transform:
-                rpy: 0.0 -0.0 0.0
-                xyz: 0.0 0.0 0.0
-            type: revolute
-            unprefixed_name: robotiq_140_right_inner_knuckle_joint
-        robotiq_140_right_outer_knuckle_joint:
-            can_id: '0'
-            hardstop_position: '0.0'
-            home_position: '0.0'
-            initial_position: '0.0'
-            limits:
-                has_acceleration_limits: 'true'
-                has_effort_limits: 'false'
-                has_jerk_limits: 'true'
-                has_position_limits: 'true'
-                has_velocity_limits: 'true'
-                max_acceleration: '10.0'
-                max_effort: '0.0'
-                max_jerk: '100.0'
-                max_position: '3.141593'
-                max_velocity: '10.0'
-                min_acceleration: '-10.0'
-                min_effort: '-0.0'
-                min_jerk: '-100.0'
-                min_position: '-3.141593'
-                min_velocity: '-10.0'
-            lock: 'false'
-            lock_position: '0.0'
-            mimic: 'true'
-            name: robotiq_140_right_outer_knuckle_joint
-            physics:
-                damping: '0.0'
-                friction: '0.0'
-            transform:
-                rpy: 0.0 -0.0 0.0
-                xyz: 0.0 0.0 0.0
-            type: revolute
-            unprefixed_name: robotiq_140_right_outer_knuckle_joint
-    robotiq_140_finger_joint:
+            unprefixed_name: robotiq_85_right_knuckle_joint
+    robotiq_85_left_finger_tip_joint:
+        can_id: '0'
+        hardstop_position: '0.0'
+        home_position: '0.0'
+        initial_position: '0.0'
+        limits:
+            has_acceleration_limits: 'true'
+            has_effort_limits: 'false'
+            has_jerk_limits: 'true'
+            has_position_limits: 'true'
+            has_velocity_limits: 'true'
+            max_acceleration: '10.0'
+            max_effort: '0.0'
+            max_jerk: '100.0'
+            max_position: '3.141593'
+            max_velocity: '10.0'
+            min_acceleration: '-10.0'
+            min_effort: '-0.0'
+            min_jerk: '-100.0'
+            min_position: '-3.141593'
+            min_velocity: '-10.0'
+        lock: 'false'
+        lock_position: '0.0'
+        mimic: 'true'
+        name: back_right_robotiq_85_left_finger_tip_joint
+        physics:
+            damping: '0.0'
+            friction: '0.0'
+        transform:
+            rpy: 0.0 -0.0 0.0
+            xyz: 0.0 0.0 0.0
+        type: revolute
+        unprefixed_name: robotiq_85_left_finger_tip_joint
+    robotiq_85_left_inner_knuckle_joint:
+        can_id: '0'
+        hardstop_position: '0.0'
+        home_position: '0.0'
+        initial_position: '0.0'
+        limits:
+            has_acceleration_limits: 'true'
+            has_effort_limits: 'false'
+            has_jerk_limits: 'true'
+            has_position_limits: 'true'
+            has_velocity_limits: 'true'
+            max_acceleration: '10.0'
+            max_effort: '0.0'
+            max_jerk: '100.0'
+            max_position: '3.141593'
+            max_velocity: '10.0'
+            min_acceleration: '-10.0'
+            min_effort: '-0.0'
+            min_jerk: '-100.0'
+            min_position: '-3.141593'
+            min_velocity: '-10.0'
+        lock: 'false'
+        lock_position: '0.0'
+        mimic: 'true'
+        name: back_right_robotiq_85_left_inner_knuckle_joint
+        physics:
+            damping: '0.0'
+            friction: '0.0'
+        transform:
+            rpy: 0.0 -0.0 0.0
+            xyz: 0.0 0.0 0.0
+        type: revolute
+        unprefixed_name: robotiq_85_left_inner_knuckle_joint
+    robotiq_85_left_knuckle_joint:
         can_id: '0'
         hardstop_position: '0.0'
         home_position: '0.0'
@@ -258,7 +324,7 @@ joints:
         lock: 'false'
         lock_position: '0.0'
         mimic: 'false'
-        name: robotiq_140_finger_joint
+        name: back_right_robotiq_85_left_knuckle_joint
         physics:
             damping: '0.0'
             friction: '0.0'
@@ -266,8 +332,8 @@ joints:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
         type: revolute
-        unprefixed_name: robotiq_140_finger_joint
-    robotiq_140_left_inner_finger_joint:
+        unprefixed_name: robotiq_85_left_knuckle_joint
+    robotiq_85_right_finger_tip_joint:
         can_id: '0'
         hardstop_position: '0.0'
         home_position: '0.0'
@@ -291,7 +357,7 @@ joints:
         lock: 'false'
         lock_position: '0.0'
         mimic: 'true'
-        name: robotiq_140_left_inner_finger_joint
+        name: back_right_robotiq_85_right_finger_tip_joint
         physics:
             damping: '0.0'
             friction: '0.0'
@@ -299,8 +365,8 @@ joints:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
         type: revolute
-        unprefixed_name: robotiq_140_left_inner_finger_joint
-    robotiq_140_left_inner_knuckle_joint:
+        unprefixed_name: robotiq_85_right_finger_tip_joint
+    robotiq_85_right_inner_knuckle_joint:
         can_id: '0'
         hardstop_position: '0.0'
         home_position: '0.0'
@@ -324,7 +390,7 @@ joints:
         lock: 'false'
         lock_position: '0.0'
         mimic: 'true'
-        name: robotiq_140_left_inner_knuckle_joint
+        name: back_right_robotiq_85_right_inner_knuckle_joint
         physics:
             damping: '0.0'
             friction: '0.0'
@@ -332,8 +398,8 @@ joints:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
         type: revolute
-        unprefixed_name: robotiq_140_left_inner_knuckle_joint
-    robotiq_140_right_inner_finger_joint:
+        unprefixed_name: robotiq_85_right_inner_knuckle_joint
+    robotiq_85_right_knuckle_joint:
         can_id: '0'
         hardstop_position: '0.0'
         home_position: '0.0'
@@ -357,7 +423,7 @@ joints:
         lock: 'false'
         lock_position: '0.0'
         mimic: 'true'
-        name: robotiq_140_right_inner_finger_joint
+        name: back_right_robotiq_85_right_knuckle_joint
         physics:
             damping: '0.0'
             friction: '0.0'
@@ -365,76 +431,10 @@ joints:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
         type: revolute
-        unprefixed_name: robotiq_140_right_inner_finger_joint
-    robotiq_140_right_inner_knuckle_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
-        initial_position: '0.0'
-        limits:
-            has_acceleration_limits: 'true'
-            has_effort_limits: 'false'
-            has_jerk_limits: 'true'
-            has_position_limits: 'true'
-            has_velocity_limits: 'true'
-            max_acceleration: '10.0'
-            max_effort: '0.0'
-            max_jerk: '100.0'
-            max_position: '3.141593'
-            max_velocity: '10.0'
-            min_acceleration: '-10.0'
-            min_effort: '-0.0'
-            min_jerk: '-100.0'
-            min_position: '-3.141593'
-            min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
-        name: robotiq_140_right_inner_knuckle_joint
-        physics:
-            damping: '0.0'
-            friction: '0.0'
-        transform:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-        type: revolute
-        unprefixed_name: robotiq_140_right_inner_knuckle_joint
-    robotiq_140_right_outer_knuckle_joint:
-        can_id: '0'
-        hardstop_position: '0.0'
-        home_position: '0.0'
-        initial_position: '0.0'
-        limits:
-            has_acceleration_limits: 'true'
-            has_effort_limits: 'false'
-            has_jerk_limits: 'true'
-            has_position_limits: 'true'
-            has_velocity_limits: 'true'
-            max_acceleration: '10.0'
-            max_effort: '0.0'
-            max_jerk: '100.0'
-            max_position: '3.141593'
-            max_velocity: '10.0'
-            min_acceleration: '-10.0'
-            min_effort: '-0.0'
-            min_jerk: '-100.0'
-            min_position: '-3.141593'
-            min_velocity: '-10.0'
-        lock: 'false'
-        lock_position: '0.0'
-        mimic: 'true'
-        name: robotiq_140_right_outer_knuckle_joint
-        physics:
-            damping: '0.0'
-            friction: '0.0'
-        transform:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-        type: revolute
-        unprefixed_name: robotiq_140_right_outer_knuckle_joint
+        unprefixed_name: robotiq_85_right_knuckle_joint
 links:
     entities:
-        robotiq_140_base_link:
+        back_right_back_right_robotiq_85_base_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -457,14 +457,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_base_link
+            name: back_right_robotiq_85_base_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_base_link
+            unprefixed_name: robotiq_85_base_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_left_inner_finger:
+        back_right_back_right_robotiq_85_left_finger_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -487,14 +487,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_left_inner_finger
+            name: back_right_robotiq_85_left_finger_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_left_inner_finger
+            unprefixed_name: robotiq_85_left_finger_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_left_inner_finger_pad:
+        back_right_back_right_robotiq_85_left_finger_tip_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -517,14 +517,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_left_inner_finger_pad
+            name: back_right_robotiq_85_left_finger_tip_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_left_inner_finger_pad
+            unprefixed_name: robotiq_85_left_finger_tip_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_left_inner_knuckle:
+        back_right_back_right_robotiq_85_left_inner_knuckle_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -547,14 +547,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_left_inner_knuckle
+            name: back_right_robotiq_85_left_inner_knuckle_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_left_inner_knuckle
+            unprefixed_name: robotiq_85_left_inner_knuckle_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_left_outer_finger:
+        back_right_back_right_robotiq_85_left_knuckle_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -577,14 +577,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_left_outer_finger
+            name: back_right_robotiq_85_left_knuckle_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_left_outer_finger
+            unprefixed_name: robotiq_85_left_knuckle_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_left_outer_knuckle:
+        back_right_back_right_robotiq_85_right_finger_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -607,14 +607,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_left_outer_knuckle
+            name: back_right_robotiq_85_right_finger_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_left_outer_knuckle
+            unprefixed_name: robotiq_85_right_finger_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_right_inner_finger:
+        back_right_back_right_robotiq_85_right_finger_tip_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -637,14 +637,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_right_inner_finger
+            name: back_right_robotiq_85_right_finger_tip_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_right_inner_finger
+            unprefixed_name: robotiq_85_right_finger_tip_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_right_inner_finger_pad:
+        back_right_back_right_robotiq_85_right_inner_knuckle_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -667,14 +667,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_right_inner_finger_pad
+            name: back_right_robotiq_85_right_inner_knuckle_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_right_inner_finger_pad
+            unprefixed_name: robotiq_85_right_inner_knuckle_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_right_inner_knuckle:
+        back_right_back_right_robotiq_85_right_knuckle_link:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -697,74 +697,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'false'
-            name: robotiq_140_right_inner_knuckle
+            name: back_right_robotiq_85_right_knuckle_link
             scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_right_inner_knuckle
+            unprefixed_name: robotiq_85_right_knuckle_link
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_right_outer_finger:
-            collision_geometry_size: 0.0 0.0 0.0
-            collision_geometry_type: box
-            collision_mesh_path: ''
-            collision_origin:
-                rpy: 0.0 -0.0 0.0
-                xyz: 0.0 0.0 0.0
-            disable: 'false'
-            display: 'false'
-            inertial:
-                inertia:
-                    ixx: '0.0'
-                    ixy: '0.0'
-                    ixz: '0.0'
-                    iyy: '0.0'
-                    iyz: '0.0'
-                    izz: '0.0'
-                mass: '0.0'
-                origin:
-                    x: '0.0'
-                    y: '0.0'
-                    z: '0.0'
-            is_frame: 'false'
-            name: robotiq_140_right_outer_finger
-            scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_right_outer_finger
-            visual_mesh_path: ''
-            visual_origin:
-                rpy: 0.0 -0.0 0.0
-                xyz: 0.0 0.0 0.0
-        robotiq_140_right_outer_knuckle:
-            collision_geometry_size: 0.0 0.0 0.0
-            collision_geometry_type: box
-            collision_mesh_path: ''
-            collision_origin:
-                rpy: 0.0 -0.0 0.0
-                xyz: 0.0 0.0 0.0
-            disable: 'false'
-            display: 'false'
-            inertial:
-                inertia:
-                    ixx: '0.0'
-                    ixy: '0.0'
-                    ixz: '0.0'
-                    iyy: '0.0'
-                    iyz: '0.0'
-                    izz: '0.0'
-                mass: '0.0'
-                origin:
-                    x: '0.0'
-                    y: '0.0'
-                    z: '0.0'
-            is_frame: 'false'
-            name: robotiq_140_right_outer_knuckle
-            scene_obj_collision: 'true'
-            unprefixed_name: robotiq_140_right_outer_knuckle
-            visual_mesh_path: ''
-            visual_origin:
-                rpy: 0.0 -0.0 0.0
-                xyz: 0.0 0.0 0.0
-        robotiq_140_tcp_tool:
+        back_right_back_right_robotiq_85_tcp_tool:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -787,14 +727,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'true'
-            name: robotiq_140_tcp_tool
+            name: back_right_robotiq_85_tcp_tool
             scene_obj_collision: 'false'
-            unprefixed_name: robotiq_140_tcp_tool
+            unprefixed_name: robotiq_85_tcp_tool
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-        robotiq_140_tcp_world:
+        back_right_back_right_robotiq_85_tcp_world:
             collision_geometry_size: 0.0 0.0 0.0
             collision_geometry_type: box
             collision_mesh_path: ''
@@ -817,14 +757,14 @@ links:
                     y: '0.0'
                     z: '0.0'
             is_frame: 'true'
-            name: robotiq_140_tcp_world
+            name: back_right_robotiq_85_tcp_world
             scene_obj_collision: 'false'
-            unprefixed_name: robotiq_140_tcp_world
+            unprefixed_name: robotiq_85_tcp_world
             visual_mesh_path: ''
             visual_origin:
                 rpy: 0.0 -0.0 0.0
                 xyz: 0.0 0.0 0.0
-    robotiq_140_base_link:
+    robotiq_85_base_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -847,14 +787,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_base_link
+        name: back_right_robotiq_85_base_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_base_link
+        unprefixed_name: robotiq_85_base_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_left_inner_finger:
+    robotiq_85_left_finger_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -877,14 +817,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_left_inner_finger
+        name: back_right_robotiq_85_left_finger_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_left_inner_finger
+        unprefixed_name: robotiq_85_left_finger_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_left_inner_finger_pad:
+    robotiq_85_left_finger_tip_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -907,14 +847,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_left_inner_finger_pad
+        name: back_right_robotiq_85_left_finger_tip_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_left_inner_finger_pad
+        unprefixed_name: robotiq_85_left_finger_tip_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_left_inner_knuckle:
+    robotiq_85_left_inner_knuckle_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -937,14 +877,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_left_inner_knuckle
+        name: back_right_robotiq_85_left_inner_knuckle_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_left_inner_knuckle
+        unprefixed_name: robotiq_85_left_inner_knuckle_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_left_outer_finger:
+    robotiq_85_left_knuckle_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -967,14 +907,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_left_outer_finger
+        name: back_right_robotiq_85_left_knuckle_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_left_outer_finger
+        unprefixed_name: robotiq_85_left_knuckle_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_left_outer_knuckle:
+    robotiq_85_right_finger_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -997,14 +937,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_left_outer_knuckle
+        name: back_right_robotiq_85_right_finger_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_left_outer_knuckle
+        unprefixed_name: robotiq_85_right_finger_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_right_inner_finger:
+    robotiq_85_right_finger_tip_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -1027,14 +967,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_right_inner_finger
+        name: back_right_robotiq_85_right_finger_tip_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_right_inner_finger
+        unprefixed_name: robotiq_85_right_finger_tip_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_right_inner_finger_pad:
+    robotiq_85_right_inner_knuckle_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -1057,14 +997,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_right_inner_finger_pad
+        name: back_right_robotiq_85_right_inner_knuckle_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_right_inner_finger_pad
+        unprefixed_name: robotiq_85_right_inner_knuckle_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_right_inner_knuckle:
+    robotiq_85_right_knuckle_link:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -1087,74 +1027,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'false'
-        name: robotiq_140_right_inner_knuckle
+        name: back_right_robotiq_85_right_knuckle_link
         scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_right_inner_knuckle
+        unprefixed_name: robotiq_85_right_knuckle_link
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_right_outer_finger:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-        disable: 'false'
-        display: 'false'
-        inertial:
-            inertia:
-                ixx: '0.0'
-                ixy: '0.0'
-                ixz: '0.0'
-                iyy: '0.0'
-                iyz: '0.0'
-                izz: '0.0'
-            mass: '0.0'
-            origin:
-                x: '0.0'
-                y: '0.0'
-                z: '0.0'
-        is_frame: 'false'
-        name: robotiq_140_right_outer_finger
-        scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_right_outer_finger
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-    robotiq_140_right_outer_knuckle:
-        collision_geometry_size: 0.0 0.0 0.0
-        collision_geometry_type: box
-        collision_mesh_path: ''
-        collision_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-        disable: 'false'
-        display: 'false'
-        inertial:
-            inertia:
-                ixx: '0.0'
-                ixy: '0.0'
-                ixz: '0.0'
-                iyy: '0.0'
-                iyz: '0.0'
-                izz: '0.0'
-            mass: '0.0'
-            origin:
-                x: '0.0'
-                y: '0.0'
-                z: '0.0'
-        is_frame: 'false'
-        name: robotiq_140_right_outer_knuckle
-        scene_obj_collision: 'true'
-        unprefixed_name: robotiq_140_right_outer_knuckle
-        visual_mesh_path: ''
-        visual_origin:
-            rpy: 0.0 -0.0 0.0
-            xyz: 0.0 0.0 0.0
-    robotiq_140_tcp_tool:
+    robotiq_85_tcp_tool:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -1177,14 +1057,14 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'true'
-        name: robotiq_140_tcp_tool
+        name: back_right_robotiq_85_tcp_tool
         scene_obj_collision: 'false'
-        unprefixed_name: robotiq_140_tcp_tool
+        unprefixed_name: robotiq_85_tcp_tool
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
-    robotiq_140_tcp_world:
+    robotiq_85_tcp_world:
         collision_geometry_size: 0.0 0.0 0.0
         collision_geometry_type: box
         collision_mesh_path: ''
@@ -1207,42 +1087,41 @@ links:
                 y: '0.0'
                 z: '0.0'
         is_frame: 'true'
-        name: robotiq_140_tcp_world
+        name: back_right_robotiq_85_tcp_world
         scene_obj_collision: 'false'
-        unprefixed_name: robotiq_140_tcp_world
+        unprefixed_name: robotiq_85_tcp_world
         visual_mesh_path: ''
         visual_origin:
             rpy: 0.0 -0.0 0.0
             xyz: 0.0 0.0 0.0
 lock_joints: 'false'
-max_width: '0.14'
+max_width: '0.085'
 plugin: none
 points_of_interest: []
 positions:
     default_positions: initial
-    joint_names: robotiq_140_finger_joint robotiq_140_right_outer_knuckle_joint robotiq_140_left_inner_knuckle_joint
-        robotiq_140_right_inner_knuckle_joint robotiq_140_left_inner_finger_joint
-        robotiq_140_right_inner_finger_joint
+    joint_names: robotiq_85_left_knuckle_joint robotiq_85_right_knuckle_joint robotiq_85_left_inner_knuckle_joint
+        robotiq_85_right_inner_knuckle_joint robotiq_85_left_finger_tip_joint robotiq_85_right_finger_tip_joint
     positions:
         initial: 0.0 0.0 0.0 0.0 0.0 0.0
-prefix: ''
-reflect: '-1'
+prefix: back_right_
+reflect: '1'
 root_link: world
 srdf:
     loaded_from_cache: 'true'
     macro_path: ''
     newly_generated: 'false'
-    path: /home/bam/bam_ws/src/robotiq_description/urdf/config/srdf_cache/robotiq_2f_140_2f_140_v0.0.0.srdf
+    path: /home/bam/bam_ws/src/robotiq_description/urdf/config/srdf_cache/back_right_robotiq_2f_85_2f_85_v0.0.0.srdf
     xacro_path: ''
-tcp_tool: tcp_tool
-tcp_world: tcp_world
-tcp_world_floating: tcp_world_floating
+tcp_tool: back_right_tcp_tool
+tcp_world: back_right_tcp_world
+tcp_world_floating: back_right_tcp_world_floating
 urdf:
     abs_package_dirs:
         robotiq_description: /home/bam/bam_ws/src
-    macro_path: /home/bam/bam_ws/src/robotiq_description/urdf/robotiq_2f_140_macro.urdf.xacro
+    macro_path: /home/bam/bam_ws/src/robotiq_description/urdf/robotiq_2f_85_macro.urdf.xacro
     path: ''
-    xacro_path: /home/bam/bam_ws/src/robotiq_description/urdf/robotiq_2f_140_config.urdf.xacro
-world_rpy: 0 0 0
-world_xyz: 0 0 0
+    xacro_path: /home/bam/bam_ws/src/robotiq_description/urdf/robotiq_2f_85_config.urdf.xacro
+world_rpy: 0.0 0.0 0.0
+world_xyz: 0.0 0.0 0.0
 z_into_table: 'false'

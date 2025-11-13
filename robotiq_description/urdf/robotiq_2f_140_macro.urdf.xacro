@@ -17,26 +17,6 @@
         gripper_max_force:=125.0
         gripper_closed_position:=0.695">
 
-        <!-- ros2 control include -->
-        <xacro:include filename="$(find robotiq_description)/urdf/2f_140.ros2_control.xacro" />
-        <!-- if we are simulating or directly communicating with the gripper we need a ros2 control instance -->
-        <xacro:if value="${include_ros2_control}">
-            <xacro:robotiq_gripper_ros2_control
-                name="${name}" prefix="${prefix}"
-                sim_gazebo="${sim_gazebo}"
-                sim_isaac="${sim_isaac}"
-                isaac_joint_commands="${isaac_joint_commands}"
-                isaac_joint_states="${isaac_joint_states}"
-                use_fake_hardware="${use_fake_hardware}"
-                mock_sensor_commands="${mock_sensor_commands}"
-                com_port="${com_port}"
-                gripper_speed_multiplier="${gripper_speed_multiplier}"
-                gripper_force_multiplier="${gripper_force_multiplier}"
-                gripper_max_speed="${gripper_max_speed}"
-                gripper_max_force="${gripper_max_force}"
-                gripper_closed_position="${gripper_closed_position}"/>
-        </xacro:if>
-
         <link name="${prefix}robotiq_140_base_link">
         <inertial>
           <origin xyz="8.625E-08 -4.6583E-06 0.03145" rpy="0 0 0" />
@@ -68,11 +48,11 @@
     <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
   </xacro:macro>
 
-  <xacro:macro name="make_hand" params="config_file_path">
-    <xacro:property name="cfg" value="${xacro.load_yaml(config_file_path)}"/>
+  <xacro:macro name="make_hand" params="config_file">
+    <xacro:property name="cfg" value="${xacro.load_yaml(config_file)}"/>
     <xacro:robotiq_gripper
         name="${cfg['info']['name'] if cfg['info']['name'] else 'Robotiq2F140'}"
-        prefix="${cfg['prefix']}"
+        prefix="${cfg['info']['prefix']}"
         sim_gazebo="${cfg['args']['sim_gazebo']}"
         sim_isaac="${cfg['args']['sim_isaac']}"
         isaac_joint_commands="${cfg['args']['isaac_joint_commands']}"
