@@ -48,6 +48,10 @@
     <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
   </xacro:macro>
 
+  <xacro:macro name="make_config" params="config_file">
+    <xacro:make_hand config_file="${config_file}"/>
+  </xacro:macro>
+
   <xacro:macro name="make_hand" params="config_file">
     <xacro:property name="cfg" value="${xacro.load_yaml(config_file)}"/>
     <xacro:robotiq_gripper

@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="robotiq_gripper">
 
+    <xacro:macro name="make_config" params="config_file">
+        <xacro:make_hand config_file="${config_file}"/>
+    </xacro:macro>
     <xacro:macro name="make_hand" params="config_file">
         <xacro:property name="cfg" value="${xacro.load_yaml(config_file)}"/>
     
